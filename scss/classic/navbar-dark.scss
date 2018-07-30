@@ -1,0 +1,22 @@
+.navbar-bootswatch {
+    @extend .navbar-dark;
+    background-color: $primary;
+
+    .usermenu {
+        color: $navbar-dark-color;
+    }
+    .usermenu a,
+    a .usertext {
+        color: $navbar-dark-color;
+        @include hover-focus {
+            color: $navbar-dark-hover-color;
+        }
+
+        &.disabled {
+            color: $navbar-dark-disabled-color;
+        }
+    }
+    .dropdown-menu a .icon {
+        color: inherit !important;
+    }
+}
