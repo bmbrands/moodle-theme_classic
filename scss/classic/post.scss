@@ -130,32 +130,37 @@
     @include page_layout(20%);
 }
 
-.block.block_settings {
-    #settingsnav {
-        margin: 0 -15px;
-        padding-top: 0px !important;
-    }
-}
-.block.block_navigation .block_tree ul,
-.block_settings .block_tree ul {
-    margin-left: 0;
-    padding-left: 0.5rem;
-}
+// Settings and Navigation blocks don't render well from default boost.
 .block_navigation,
 .block_settings {
     .block_tree {
         .tree_item.branch {
-            padding-left: 1.3rem;
+            margin-left: 0;
+            padding-left: 1rem;
         }
         p.hasicon {
             text-indent: 0;
             padding-left: 1rem;
         }
+        ul {
+            margin-left: 0;
+            padding-left: 1rem;
+        }
     }
 }
 
-.block_tree .tree_item.branch {
-    margin-left: 0;
+.block.block_settings {
+    #settingsnav {
+        padding-top: 0px !important;
+    }
+    .type_setting > p,
+    .type_siteadmin > p,
+    .type_siteadmin > ul {
+        padding-left: 0.75rem !important;
+    }
 }
 
-
+// Fix the fa-fw empty icon to have at least a circle.
+.block_navigation .navicon:before {
+    content: $fa-var-genderless;
+}
