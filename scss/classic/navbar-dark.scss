@@ -17,6 +17,6 @@
         }
     }
     .dropdown-menu a .icon {
-        color: inherit !important;
+        color: inherit !important; // stylelint-disable-line declaration-no-important
     }
 }
