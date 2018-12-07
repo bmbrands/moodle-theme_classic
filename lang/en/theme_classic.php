@@ -38,3 +38,4 @@ $string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
 $string['sitetitle'] = 'Site Title';
+$string['privacy:metadata'] = 'The Classic theme does not store any personal data.';

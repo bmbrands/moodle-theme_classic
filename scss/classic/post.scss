@@ -4,7 +4,7 @@
 @mixin page_layout($blockswidth) {
     $mainwidth-oneblock: (100% - $blockswidth);
     $mainwidth-twoblocks: (100% - $blockswidth * 2);
-    #page-content{
+    #page-content {
         display: flex;
 
         .region-main {
@@ -89,7 +89,7 @@
                 .region-main {
                     flex: 0 0 $mainwidth-twoblocks;
                     max-width: $mainwidth-twoblocks;
-                    padding:0;
+                    padding: 0;
                 }
                 .columnleft {
                     flex: 0 0 $blockswidth;
@@ -151,12 +151,12 @@
 
 .block.block_settings {
     #settingsnav {
-        padding-top: 0px !important;
+        padding-top: 0 !important; /* stylelint-disable-line declaration-no-important */
     }
     .type_setting > p,
     .type_siteadmin > p,
     .type_siteadmin > ul {
-        padding-left: 0.75rem !important;
+        padding-left: 0.75rem !important; /* stylelint-disable-line declaration-no-important */
     }
 }
 
