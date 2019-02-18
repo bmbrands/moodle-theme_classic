@@ -40,8 +40,8 @@ function theme_classic_get_main_scss_content($theme) {
 
     $context = context_system::instance();
     $scss .= file_get_contents($CFG->dirroot . '/theme/classic/scss/classic/pre.scss');
-    if ($filename) {
-        $scss .= file_get_contents($CFG->dirroot . '/theme/classic/scss/preset/' . $filename);
+    if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_classic', 'preset', 0, '/', $filename))) {
+        $scss .= $presetfile->get_content();
     } else {
         // Safety fallback - maybe new installs etc.
         $scss .= file_get_contents($CFG->dirroot . '/theme/classic/scss/preset/default.scss');

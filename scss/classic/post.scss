@@ -130,6 +130,27 @@
     @include page_layout(20%);
 }
 
+.block_myoverview,
+.block_recentlyaccesseditems {
+    .dashboard-card-deck {
+        .dashboard-card {
+            width: calc(33.33% - #{$card-gutter});
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .blockcolumn {
+        .dashboard-card-deck {
+            margin-left: 0;
+            margin-right: 0;
+            .dashboard-card {
+                width: calc(100% - #{$card-gutter}) !important;
+            }
+        }
+    }
+}
+
 // Settings and Navigation blocks don't render well from default boost.
 .block_navigation,
 .block_settings {
@@ -144,7 +165,7 @@
         }
         ul {
             margin-left: 0;
-            padding-left: 1rem;
+            padding-left: 0.25rem;
         }
     }
 }
