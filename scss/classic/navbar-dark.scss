@@ -5,7 +5,7 @@
     .usermenu {
         color: $navbar-dark-color;
     }
-    .usermenu a,
+    a.dropdown-toggle,
     a .usertext {
         color: $navbar-dark-color;
         @include hover-focus {
