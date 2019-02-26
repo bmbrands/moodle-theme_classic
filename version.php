@@ -32,4 +32,4 @@ $plugin->dependencies = [
     'theme_boost' => 2018120300
 ];
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = 1.3;
+$plugin->release = 1.4;

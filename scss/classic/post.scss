@@ -1,4 +1,4 @@
-// General Post SCSS for use in all presets.
+    // General Post SCSS for use in all presets.
 
 // Generate the column layout css.
 @mixin page_layout($blockswidth) {
@@ -157,19 +157,24 @@
     .block_tree {
         .tree_item.branch {
             margin-left: 0;
-            padding-left: 1rem;
+            padding-left: 0.75rem;
         }
         p.hasicon {
             text-indent: 0;
-            padding-left: 1rem;
+            padding-left: 0.75rem;
         }
         ul {
             margin-left: 0;
-            padding-left: 0.25rem;
+            padding-left: 0.75rem;
         }
     }
 }
 
+.block..block_navigation {
+    .block_tree ul[role="group"] {
+        padding-left: 0;
+    }
+}
 .block.block_settings {
     #settingsnav {
         padding-top: 0 !important; /* stylelint-disable-line declaration-no-important */
