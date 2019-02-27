@@ -15,7 +15,17 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    Page header.
+    @template theme_classic/header
+
+    This template renders the header.
+
+    Example context (json):
+    {
+        "contextheader": "context_header_html",
+        "hasnavbar": false,
+        "navbar": "navbar_if_available",
+        "courseheader": "course_header_html"
+    }
 }}
 <header id="page-header" class="row">
     <div class="col-12 pt-3 pb-3">
