@@ -117,6 +117,16 @@ function theme_classic_get_extra_scss($theme) {
 }
 
 /**
+ * Get compiled css.
+ *
+ * @return string compiled css
+ */
+function theme_classic_get_precompiled_css() {
+    global $CFG;
+    return file_get_contents($CFG->dirroot . '/theme/classic/style/moodle.css');
+}
+
+/**
  * Serves any files associated with the theme settings.
  *
  * @param stdClass $course

@@ -145,8 +145,10 @@ $THEME->parents = ['boost'];
 $THEME->enable_dock = false;
 $THEME->extrascsscallback = 'theme_classic_get_extra_scss';
 $THEME->prescsscallback = 'theme_classic_get_pre_scss';
+$THEME->precompiledcsscallback = 'theme_classic_get_precompiled_css';
 $THEME->yuicssmodules = array();
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->scss = function($theme) {
     return theme_classic_get_main_scss_content($theme);
 };
+$THEME->usefallback = true;

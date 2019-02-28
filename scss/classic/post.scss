@@ -1,4 +1,4 @@
-    // General Post SCSS for use in all presets.
+// General Post SCSS for use in all presets.
 
 // Generate the column layout css.
 @mixin page_layout($blockswidth) {
@@ -145,7 +145,8 @@
             margin-left: 0;
             margin-right: 0;
             .dashboard-card {
-                width: calc(100% - #{$card-gutter}) !important;
+                width: calc(100% - #{$card-gutter}) !important; /* stylelint-disable-line declaration-no-important */
+                padding-top: 0 !important; /* stylelint-disable-line declaration-no-important */
             }
         }
     }
