@@ -86,6 +86,7 @@ $THEME->layouts = [
         'defaultregion' => 'side-pre',
     ),
     'login' => array(
+        'theme' => 'boost',
         'file' => 'login.php',
         'regions' => array(),
         'options' => array('langmenu' => true),
@@ -105,6 +106,7 @@ $THEME->layouts = [
     ),
     // Embeded pages, like iframe/object embeded in moodleform - it needs as much space as possible.
     'embedded' => array(
+        'theme' => 'boost',
         'file' => 'embedded.php',
         'regions' => array()
     ),
@@ -112,6 +114,7 @@ $THEME->layouts = [
     // This must not have any blocks, links, or API calls that would lead to database or cache interaction.
     // Please be extremely careful if you are modifying this layout.
     'maintenance' => array(
+        'theme' => 'boost',
         'file' => 'maintenance.php',
         'regions' => array(),
     ),
@@ -123,6 +126,7 @@ $THEME->layouts = [
     ),
     // The pagelayout used when a redirection is occuring.
     'redirect' => array(
+        'theme' => 'boost',
         'file' => 'embedded.php',
         'regions' => array(),
     ),
