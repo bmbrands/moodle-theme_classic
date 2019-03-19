@@ -1,5 +1,5 @@
 <?php
-// This file is part of the classic theme for Moodle
+// This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * classic backgrounds callbacks.
+ * Classic theme callbacks.
  *
- * @package    theme_classics
+ * @package    theme_classic
  * @copyright  2018 Bas Brands
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -58,8 +58,6 @@ function theme_classic_get_main_scss_content($theme) {
  * @return array
  */
 function theme_classic_get_pre_scss($theme) {
-    global $CFG;
-
     $scss = '';
     $configurable = [
         // Config key => [variableName, ...].

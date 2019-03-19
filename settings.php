@@ -1,5 +1,5 @@
 <?php
-// This file is part of the classic theme for Moodle
+// This file is part of Moodle - http://moodle.org/
 //
 // Moodle is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme classic settings file.
+ * Classic theme settings file.
  *
  * @package    theme_classic
  * @copyright  2018 Bas Brands
@@ -67,7 +67,7 @@ if ($ADMIN->fulltree) {
         array('maxfiles' => 20, 'accepted_types' => array('.scss')));
     $page->add($setting);
 
-        // Background image setting.
+    // Background image setting.
     $name = 'theme_classic/backgroundimage';
     $title = get_string('backgroundimage', 'theme_boost');
     $description = get_string('backgroundimage_desc', 'theme_boost');

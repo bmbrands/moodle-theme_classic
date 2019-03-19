@@ -19,7 +19,7 @@
 
     Admin time setting template.
 
-    Boost 2 column layout template.
+    Classic 1-3 column layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -66,7 +66,7 @@
                     <div> {{{ output.region_main_settings_menu }}} </div>
                 </div>
                 {{/hasregionmainsettingsmenu}}
-                <section id="region-main" class="region-main-content">
+                <section id="region-main" class="region-main-content" aria-label="{{#str}}content{{/str}}">
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
@@ -77,13 +77,13 @@
                 </section>
             </div>
             <div class="columnleft blockcolumn {{#haspreblocks}} has-blocks {{/haspreblocks}}">
-                <section data-region="blocks-column" class="hidden-print">
+                <section data-region="blocks-column" class="hidden-print" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepreblocks }}}
                 </section>
             </div>
 
             <div class="columnright blockcolumn {{#haspostblocks}} has-blocks {{/haspostblocks}}">
-                <section data-region="blocks-column" class="hidden-print">
+                <section data-region="blocks-column" class="hidden-print" aria-label="{{#str}}blocks{{/str}}">
                     {{{ sidepostblocks }}}
                 </section>
             </div>
@@ -97,8 +97,5 @@
 </html>
 {{#js}}
 require(['theme_boost/loader']);
-require(['theme_boost/drawer'], function(mod) {
-    mod.init();
-});
 {{/js}}
 

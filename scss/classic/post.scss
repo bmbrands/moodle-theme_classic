@@ -107,7 +107,7 @@
     }
 }
 
-// The block column nees some padding on small devices.
+// The block column needs some padding on small devices.
 @include media-breakpoint-down(sm) {
     .blockcolumn,
     .region-main {
@@ -146,7 +146,6 @@
             margin-right: 0;
             .dashboard-card {
                 width: calc(100% - #{$card-gutter}) !important; /* stylelint-disable-line declaration-no-important */
-                padding-top: 0 !important; /* stylelint-disable-line declaration-no-important */
             }
         }
     }
@@ -156,8 +155,11 @@
 .block_navigation,
 .block_settings {
     .block_tree {
+        &.list > li > ul {
+            padding-left: 0;
+        }
         .tree_item.branch {
-            margin-left: 0;
+            margin-left: 5px;
             padding-left: 0.75rem;
         }
         p.hasicon {
@@ -165,29 +167,26 @@
             padding-left: 0.75rem;
         }
         ul {
-            margin-left: 0;
-            padding-left: 0.75rem;
+            margin-left: 0.25rem;
+            padding-left: 1rem;
         }
     }
 }
 
-.block.block_navigation {
-    .block_tree ul[role="group"] {
-        padding-left: 0;
-    }
+.block_navigation .block_tree p.hasicon .icon,
+.block_settings .block_tree p.hasicon .icon {
+    margin-right: 5px;
 }
+
+// Remove left indenting from root nodes to allow sub-nodes to indent correctly.
+.root_node,
+.navigation_node {
+    margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+    padding-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
 .block.block_settings {
     #settingsnav {
         padding-top: 0 !important; /* stylelint-disable-line declaration-no-important */
     }
-    .type_setting > p,
-    .type_siteadmin > p,
-    .type_siteadmin > ul {
-        padding-left: 0.75rem !important; /* stylelint-disable-line declaration-no-important */
-    }
-}
-
-// Fix the fa-fw empty icon to have at least a circle.
-.block_navigation .navicon:before {
-    content: $fa-var-genderless;
 }
